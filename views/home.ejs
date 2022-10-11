@@ -1,0 +1,9 @@
+<%- include partials/header -%>
+<h1>Home</h1> 
+<p><%= content %></p>
+
+ <% newitem.forEach((element) => { %>
+    <h1> <%=  element.title  %></h1>
+    <p> <%= element.postBody.substring(0,100) + "..." %> <a href= "/postArrays/<%=element.title%>"  >Read More</a> </p>
+  <% }) %>
+<%- include partials/footer -%> 
